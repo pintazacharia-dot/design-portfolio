@@ -1,0 +1,13 @@
+node_modules/
+dist/
+qa/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+AGENTS.md
+design-qa.md
+# pnpm-lock.yaml is the canonical dependency lockfile
+package-lock.json

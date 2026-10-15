@@ -1,0 +1,2 @@
+const {chromium}=require('C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({headless:true,executablePath:'C:/Users/Administrator/AppData/Local/ms-playwright/chromium-1228/chrome-win64/chrome.exe',args:['--enable-unsafe-swiftshader']});const p=await b.newPage({viewport:{width:1600,height:812}});await p.goto('http://127.0.0.1:4173/');await p.waitForTimeout(2000);await p.screenshot({path:'qa/laser-lower.png'});await b.close()})();
