@@ -1,0 +1,11 @@
+{
+  "name": "design-portfolio",
+  "account_id": "73501df1a4259aef0498002fd731e780",
+  "compatibility_date": "2026-10-15",
+  "workers_dev": true,
+  "build": { "command": "pnpm run build" },
+  "assets": {
+    "directory": "./dist/client",
+    "not_found_handling": "single-page-application"
+  }
+}
