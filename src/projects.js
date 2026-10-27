@@ -22,7 +22,7 @@ const used=new Set(definitions.flatMap(x=>x[4]));used.add(110);
 export const projects=definitions.map(([id,title,subtitle,theme,ids,cover,video])=>({id,title,subtitle,theme,images:ids.filter(id=>!excludedImages.has(id)).map(imageById),cover:imageById(cover),video,medium:[...new Set(ids.map(id=>imageById(id).medium))]}));
 for(const theme of ['科技与数码','汽车与出行','家居与生活','品牌与包装','概念与IP']){const imgs=assets.images.filter(x=>!used.has(x.id)&&!excludedImages.has(x.id)&&x.themes.includes(theme));if(imgs.length){imgs.forEach(x=>used.add(x.id));projects.push({id:`archive-${theme}`,title:theme,subtitle:'视觉习作与探索',theme,images:imgs,cover:imgs[0],medium:[...new Set(imgs.map(x=>x.medium))]});}}
 export const films=[
- {id:'study',title:'手机动画',caption:'手机动画',poster:null},
+ {id:'study',title:'手机动画',caption:'手机动画',poster:'/media/study-poster.jpg'},
  {id:'big-eye',title:'3C 大眼仔动画',caption:'3C 大眼仔动画',poster:'/media/big-eye-poster.png'},
  {id:'rog',title:'ROG显卡动画',caption:'ROG显卡动画',poster:67},
  {id:'mouse',title:'Precision in motion',caption:'鼠标动态视觉',poster:49},
